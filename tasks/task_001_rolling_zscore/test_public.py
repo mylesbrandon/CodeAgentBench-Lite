@@ -1,0 +1,21 @@
+import math
+from starter import rolling_zscore
+
+def almost_equal(a, b, tol=1e-6):
+    if math.isnan(a) and math.isnan(b):
+        return True
+    return abs(a - b) < tol
+
+def test_basic_increasing_sequence():
+    result = rolling_zscore([1, 2, 3], 2)
+    assert len(result) == 3
+    assert almost_equal(result[0], 0.0)
+    assert almost_equal(result[1], 1.0)
+    assert almost_equal(result[2], 1.0)
+
+def test_invalid_window():
+    try:
+        rolling_zscore([1, 2, 3], 0)
+        assert False
+    except ValueError:
+        assert True
