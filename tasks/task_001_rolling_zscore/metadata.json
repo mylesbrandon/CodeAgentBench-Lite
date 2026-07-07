@@ -1,0 +1,31 @@
+{
+  "task_id": "task_001",
+  "name": "rolling_zscore",
+  "category": "numerical_robustness",
+  "difficulty": "medium",
+  "concepts": [
+    "statistics",
+    "rolling_window",
+    "edge_cases",
+    "nan_handling",
+    "zero_variance",
+    "population_standard_deviation"
+  ],
+  "public_tests": 3,
+  "hidden_tests": 8,
+  "failure_modes_targeted": [
+    "invalid_window",
+    "zero_variance",
+    "nan_handling",
+    "window_larger_than_input",
+    "incorrect_window_selection",
+    "sample_std_instead_of_population_std"
+  ],
+  "expected_agent_failure_modes": [
+    "forgets to handle zero standard deviation",
+    "uses full history instead of rolling window",
+    "does not ignore NaN values",
+    "uses sample standard deviation",
+    "passes public tests but fails edge cases"
+  ]
+}
