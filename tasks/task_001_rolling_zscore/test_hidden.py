@@ -33,7 +33,7 @@ def test_nan_ignored_in_window ():
     result = rolling_zscore([1, float("nan"), 3], 3)
     
     assert math.isnan(result[1])
-    assert almost_equal(result[1], 1.0)
+    assert almost_equal(result[2], 1.0)
 
 
 
