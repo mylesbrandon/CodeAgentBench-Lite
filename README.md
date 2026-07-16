@@ -128,7 +128,7 @@ Clone the repository and enter the project directory:
 
 ```bash
 git clone <repository-url>
-cd codeagentbench-lite
+cd codeagentbench
 ```
 
 Create a virtual environment:
@@ -257,7 +257,7 @@ The goal is to explain why an agent failed, rather than reporting only a total s
 
 ## Benchmark Principles
 
-Tasks in CodeAgentBench-Lite should be:
+Tasks in CodeAgentBench should be:
 
 * **Verifiable:** correctness can be determined through execution.
 * **Fair:** hidden tests correspond to written requirements.
